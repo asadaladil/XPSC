@@ -15,7 +15,6 @@ int main()
         {
             cin>>A[i];
         }
-        sort(A.begin(),A.end());
         for(int i=0;i<n;i++)
         {
             for(int j=i+1;j<n;j++)
