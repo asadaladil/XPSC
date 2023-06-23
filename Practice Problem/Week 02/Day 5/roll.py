@@ -3,8 +3,8 @@ from time import sleep
 sleep(3)
 initial_position=pyautogui.position()
 
-for i in range(3306465,3311009):
+for i in range(7804570,7810000):
     pyautogui.write(str(i))
     pyautogui.press('enter')
-    sleep(3)
+    sleep(2)
     pyautogui.click(initial_position)
