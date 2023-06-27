@@ -10,19 +10,27 @@ int main()
         string s;
         cin>>s;
         int n=s.size();
-        set<pair<char,int>>A;
-        char r=min(s[0],s[n-1]),p=max(s[0],s[n-1]);
+        vector<int>ans;
+        map<char,vector<int>>mp;
         for(int i=0;i<n;i++)
         {
-            if(s[i]>=r&&s[i]<=p)
+            if(s[i]>=s[0]&&s[i]<=s[n-1]||s[i]<=s[0]&&s[i]>=s[n-1]&&s[0]>s[n-1])
             {
-                A.insert({s[i],i+1});
+                mp[s[i]].push_back(i+1);
             }
         }
-        cout<<p-r<<" "<<A.size()<<endl;
-        for(auto i:A)
+        int x=s[0]<=s[n-1]?1:-1;
+        for(char r=s[0];r!=s[n-1]+x;r+=x)
         {
-            cout<<i.second<<" ";
+            for(auto it:mp[r])
+            {
+                ans.push_back(it);
+            }
+        }
+        cout<<abs(s[n-1]-s[0])<<" "<<ans.size()<<endl;
+        for(int it:ans)
+        {
+            cout<<it<<" ";
         }
         cout<<endl;
     }
