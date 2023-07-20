@@ -64,7 +64,7 @@ int main()
             {
                 ll x=n/y;
                 x--;
-                cout<<x<<" "<<1y<<" "<<y;
+                cout<<x<<" "<<y<<" "<<y;
             }
             else
             {
