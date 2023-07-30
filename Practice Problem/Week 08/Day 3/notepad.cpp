@@ -78,5 +78,6 @@ int main()
             x++;
         }
         x<n?yes_or_no;
+        // not accepted.
     }
 }
