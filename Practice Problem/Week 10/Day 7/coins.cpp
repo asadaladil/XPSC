@@ -34,52 +34,35 @@ int f(int x){if(x==1){return 1;}return x*f(x-1);}
 #define noo cout<<"NO\n"
 #define endl "\n"
 #define newl cout<<endl
-unordered_map<char,ll>mp;
-const int mod=1e9+7;
-void change()
-{
-    for(char k='a';k<='z';k++)
-    {
-        mp[k]=k-'a'+1;
-    }
-}
-ll Hash(str r)
-{
-    int n=r.size();
-    ll sum=0;
-    for(int i=0;i<n;i++)
-    {
-        ll x=pow(31,i+1)%;
-        ll y=mp[r[i]];
-        sum+=(x*y);
-    }
-    return sum;
-}
-
 int main()
 {
-    //_easy_
-    unordered_map<ll,int>mp;
-    //int n;
-    //cin>>n;
-    change();
-    str r;
-    cin>>r;
-    int a=0;
-    do {
-        ll s=Hash(r);
-        mp[s]=1;
-        a++;
-        //cout<<s;newl;
-        //cout<<r;newl;
-    } while (vary_perm(r));
-    cout<<mp.size()<<" "<<a;
-    /*int m;
-    cin>>m;
-    while(m--)
+    _easy_
+    int t;
+    cin>>t;
+    while(t--)
     {
-        str r;
-        cin>>r;
-        mp[Hash(r)]?yes_or_no;
-    }*/
+        ll a,b;
+        cin>>a>>b;
+        if(od(a)&&ev(b))
+        {
+            noo;
+            continue;
+        }
+        ll i=0;
+        while(1)
+        {
+            ll m=a-(b*i);
+            if(mod0(m,2)&&m>=0)
+            {
+                yess;
+                break;
+            }
+            if(m<0)
+            {
+                noo;
+                break;
+            }
+            i++;
+        }
+    }
 }
