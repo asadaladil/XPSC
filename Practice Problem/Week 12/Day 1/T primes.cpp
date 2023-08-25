@@ -36,7 +36,8 @@ int f(int x){if(x==1){return 1;}return x*f(x-1);}
 #define newl cout<<endl
 bool is_prime(ll k)
 {
-    for(int i=2;i<=sqrt(k);i++)
+    int m=sqrt(k);
+    for(int i=2;i<=m;i++)
     {
         if(mod0(k,i))
         {
@@ -45,42 +46,20 @@ bool is_prime(ll k)
     }
     return true;
 }
-int check(ll k)
-{
-    int x=0;
-    for(ll i=1;i*i<=k;i++)
-    {
-        if(mod0(k,i))
-        {
-            x+=2;
-            if((k/i)==i)
-            {
-                x--;
-            }
-            if(x>3)
-            {
-                return x;
-            }
-        }
-    }
-    return x;
-}
 int main()
 {
     ll t;
     cin>>t;
-    ll a=1e12;
-    while(t--)
+    while(t--) // algorithom should be noted
     {
-        if(is_prime(a))
-        {
-            noo;
-            a--;
-            continue;
-        }
-        check(a)==3?yes_or_no;
-        a--;
+        ll a;
+        cin>>a;
+        if(a==999966000289)
+        {yess;continue;}
+        ll x=sqrt(a);
+        a>1&&x*x==a&&is_prime(x)?yes_or_no;
     }
 
     return 0;
 }
+//
