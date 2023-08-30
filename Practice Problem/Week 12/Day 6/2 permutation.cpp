@@ -27,8 +27,8 @@ int f(int x){if(x==1){return 1;}return x*f(x-1);}
 #define A_sort(x) sort(x.begin(),x.end())
 #define D_sort(x) sort(x.rbegin(),x.rend())
 #define Reverse(x) reverse(x.begin(),x.end())
-#define vary(A,x,y,n) transform(A.begin()+x,A.begin()+y,A.begin()+x,[](int a){return a+n;})
-#define vary_perm(x) next_permutation(x.begin(),x.end())
+#define Vary(A,x,y,n) transform(A.begin()+x,A.begin()+y,A.begin()+x,[](int a){return a+n;})
+#define Vary_perm(x) next_permutation(x.begin(),x.end())
 #define yes_or_no cout<<"YES\n":cout<<"NO\n"
 #define yess cout<<"YES\n"
 #define noo cout<<"NO\n"
@@ -41,23 +41,8 @@ int main()
     cin>>t;
     while(t--)
     {
-        ll a,b,c;
-        cin>>a>>b>>c;
-        unordered_map<int,int>mp;
-        mp[a]++;mp[b]++;mp[c]++;
-        ll x=max({a,b,c}),y=min({a,b,c}),z=(a+b+c);
-        if(mp[x]==2)
-        {
-            cout<<x+(y/2);
-        }
-        else if(mp[y]==2)
-        {
-            y*2>=x?cout<<x:cout<<y*2;
-        }
-        else
-        {
-            od(x)?cout<<min((x/2+z-x-y),(y+(x/2+1))):cout<<min((x/2+z-x-y),(y+(x/2)));
-        }
-        newl;
+        int a,b,n;
+        cin>>n>>a>>b;
+        (n-(a+b))>=2||(a==b&&b==n)?yes_or_no;
     }
 }
