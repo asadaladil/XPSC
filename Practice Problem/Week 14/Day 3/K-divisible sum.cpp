@@ -43,8 +43,9 @@ int main()
     {
 		int n,k; 
         cin>>n>>k;
-		int x=(n-1)/(k*k)+k;
-		cout<<x/n+(x%n>0?1:0)<<endl;
+		int x=(n-1)/k*k+k;
+		cout<<x/n+bool(x%n);
+        newl;
 	}
 }
 // algorithm must be noted....
